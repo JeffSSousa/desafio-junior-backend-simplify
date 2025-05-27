@@ -38,7 +38,15 @@ public class TodoService {
 	
 	public Todo update (Long id, Todo todo){
 		Todo entity = todoRepository.getReferenceById(id);
+		updateDate(entity, todo);
 		return todoRepository.save(entity);
+	}
+
+	private void updateDate(Todo entity, Todo todo) {
+		entity.setName(todo.getName());
+		entity.setDescription(todo.getDescription());
+		entity.setCompleted(todo.isCompleted());
+		entity.setPriority(todo.getPriority());
 	}
 
 }
