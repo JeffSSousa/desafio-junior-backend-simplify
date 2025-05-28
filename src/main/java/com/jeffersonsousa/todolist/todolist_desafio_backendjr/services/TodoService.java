@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entities.Todo;
 import com.jeffersonsousa.todolist.todolist_desafio_backendjr.repositories.TodoRepository;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class TodoService {
@@ -25,7 +26,7 @@ public class TodoService {
 	
 	public Todo findById(Long id) {
 		Optional<Todo> obj = todoRepository.findById(id);
-		return obj.get();
+		return obj.orElseThrow(()-> new ResourceNotFoundException(id));
 	}
 	
 	public Todo insert(Todo todo){
