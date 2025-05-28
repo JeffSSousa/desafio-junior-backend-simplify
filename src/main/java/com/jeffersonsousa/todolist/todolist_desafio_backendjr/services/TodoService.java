@@ -12,38 +12,43 @@ import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entities.Todo;
 import com.jeffersonsousa.todolist.todolist_desafio_backendjr.repositories.TodoRepository;
 import com.jeffersonsousa.todolist.todolist_desafio_backendjr.services.exceptions.ResourceNotFoundException;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class TodoService {
-	
+
 	@Autowired
 	private TodoRepository todoRepository;
-	
-	public List<Todo> findAll(){
-		Sort sort = Sort.by(Direction.DESC, "priority")
-				    .and(Sort.by(Direction.ASC, "id"));
+
+	public List<Todo> findAll() {
+		Sort sort = Sort.by(Direction.DESC, "priority").and(Sort.by(Direction.ASC, "id"));
 		return todoRepository.findAll(sort);
 	}
-	
+
 	public Todo findById(Long id) {
 		Optional<Todo> obj = todoRepository.findById(id);
-		return obj.orElseThrow(()-> new ResourceNotFoundException(id));
+		return obj.orElseThrow(() -> new ResourceNotFoundException(id));
 	}
-	
-	public Todo insert(Todo todo){
+
+	public Todo insert(Todo todo) {
 		return todoRepository.save(todo);
 	}
-	
-	public void delete(Long id){
-		if(!todoRepository.existsById(id)) {
+
+	public void delete(Long id) {
+		if (!todoRepository.existsById(id)) {
 			throw new ResourceNotFoundException(id);
 		}
 		todoRepository.deleteById(id);
+	}
+
+	public Todo update(Long id, Todo todo) {
+		try {
+			Todo entity = todoRepository.getReferenceById(id);
+			updateDate(entity, todo);
+			return todoRepository.save(entity);
+		} catch (EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
 		}
-	
-	public Todo update (Long id, Todo todo){
-		Todo entity = todoRepository.getReferenceById(id);
-		updateDate(entity, todo);
-		return todoRepository.save(entity);
 	}
 
 	private void updateDate(Todo entity, Todo todo) {
