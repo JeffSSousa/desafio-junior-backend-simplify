@@ -34,8 +34,11 @@ public class TodoService {
 	}
 	
 	public void delete(Long id){
+		if(!todoRepository.existsById(id)) {
+			throw new ResourceNotFoundException(id);
+		}
 		todoRepository.deleteById(id);
-	}
+		}
 	
 	public Todo update (Long id, Todo todo){
 		Todo entity = todoRepository.getReferenceById(id);
