@@ -4,7 +4,6 @@
 Este projeto foi desenvolvido como parte do processo seletivo para vaga de desenvolvedor backend júnior da Simplify. Ele consiste em uma API REST construída com Java Spring Boot, seguindo boas práticas de organização, validação e persistência de dados.
 
 
----
 <br><br>
 
 ## 🛠️ Tecnologias Utilizadas
@@ -18,7 +17,6 @@ Este projeto foi desenvolvido como parte do processo seletivo para vaga de desen
 - Maven
 - Postman
 
----
 <br><br>
 
 ## ⚙️ Funcionalidades
@@ -29,7 +27,6 @@ Este projeto foi desenvolvido como parte do processo seletivo para vaga de desen
 - Atualização de dados de clientes
 - Exclusão de clientes
 
----
 <br><br>
 
 ## 📂 Estrutura do Projeto
@@ -48,7 +45,6 @@ src
 └── test
 ```
 
----
 <br><br>
 
 ## 📮 Exemplos de Requisições (Postman)
@@ -89,8 +85,6 @@ Este projeto utiliza dois bancos de dados em diferentes contextos:
 ### 🧪 H2 Database: Utilizado em ambiente de testes e desenvolvimento local rápido.
 ![Modo Teste - H2](docs/images/H2-modoTest-SQL.png)
 <br><br>
----
-<br><br>
 
 
 
@@ -106,7 +100,6 @@ git clone https://github.com/JeffSSousa/desafio-junior-backend-simplify.git
 
 - Navegue até a pasta do projeto e abra no seu IDE (Eclipse, IntelliJ, VSCode).
 
----
 <br><br>
 
 ### Rodar projeto no modo test
@@ -133,7 +126,6 @@ spring.jpa.open-in-view=true
     - Password: (deixe em branco)
 
 
----
 <br><br>
 
 ### Rodar projeto no modo dev
@@ -181,7 +173,6 @@ spring.jpa.open-in-view=true
 - Login : developer
 - Password : 1234567
 
----
 <br><br>
 
 ## 📌 Observações
@@ -190,7 +181,6 @@ spring.jpa.open-in-view=true
 - Projeto no modo test está em memoria(H2), portanto os dados são apagados ao reiniciar.
 - Todas as rotas foram testadas com o Postman, conforme prints acima.
 
----
 <br><br>
 
 ## 🙋 Sobre o Autor
