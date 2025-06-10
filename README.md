@@ -22,10 +22,10 @@ Este projeto foi desenvolvido como parte do processo seletivo para vaga de desen
 ## ⚙️ Funcionalidades
 
 
-- Cadastro de clientes
-- Listagem de clientes
-- Atualização de dados de clientes
-- Exclusão de clientes
+- Cadastro de tarefas
+- Listagem de tarefas
+- Atualização de dados de tarefas
+- Exclusão de tarefas
 
 <br><br>
 
@@ -50,25 +50,25 @@ src
 ## 📮 Exemplos de Requisições (Postman)
 
 
-### ✅ Criar Cliente (POST `/todos`)
+### ✅ Criar Tarefa (POST `/todos`)
 ![POST](docs/images/Postman-POST-Insert.png)
 <br><br>
 
 
-### 📋 Listar Clientes (GET `/todos`)
+### 📋 Listar Tarefas (GET `/todos`)
 ![GET All](docs/images/Postman-GET-FindAll.png)
 <br><br>
 
-### 📋 Buscar Cliente por Id (GET `/todos/{id}`)
+### 📋 Buscar Tarefa por Id (GET `/todos/{id}`)
 ![GET By ID](docs/images/Postman-GET-FindById.png)
 <br><br>
 
 
-### ✏️ Atualizar Cliente (PUT `/todos/{id}`)
+### ✏️ Atualizar Tarefa (PUT `/todos/{id}`)
 ![PUT](docs/images/Postman-PUT-Update.png)
 <br><br>
 
-### ❌ Deletar Cliente (DELETE `/todos/{id}`)
+### ❌ Deletar Tarefa (DELETE `/todos/{id}`)
 ![DELETE](docs/images/Postman-DELETE-Delete.png)
 <br><br>
 
