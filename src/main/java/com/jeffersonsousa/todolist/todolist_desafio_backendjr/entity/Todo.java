@@ -3,6 +3,8 @@ package com.jeffersonsousa.todolist.todolist_desafio_backendjr.entity;
 import java.io.Serializable;
 import java.util.Objects;
 
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.dto.TodoRequestDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -40,6 +42,13 @@ public class Todo implements Serializable{
 		this.completed = completed;
 		this.priority = priority;
 		this.login = login;
+	}
+	
+	public Todo(TodoRequestDTO dto) {
+		this.name = dto.name();
+		this.description = dto.description();
+		this.completed = dto.completed();
+		this.priority = dto.priority();
 	}
 
 
