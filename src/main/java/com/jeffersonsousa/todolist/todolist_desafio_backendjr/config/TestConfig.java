@@ -20,9 +20,10 @@ public class TestConfig implements CommandLineRunner{
 	@Override
 	public void run(String... args) {
 		
-		Todo example1 = new Todo("Back-end", "Estudar Spring Boot", false, 2);
-		Todo example2 = new Todo("DevOps", "Fazer deploy no Heroku", true, 3);
-		Todo example3 = new Todo("Testes", "Criar testes com JUnit", false, 1);
+		
+		Todo example1 = new Todo("Back-end", "Estudar Spring Boot", false, 2, null);
+		Todo example2 = new Todo("DevOps", "Fazer deploy no Heroku", true, 3, null);
+		Todo example3 = new Todo("Testes", "Criar testes com JUnit", false, 1, null);
 		
 		todoRepository.saveAll(Arrays.asList(example1,example2,example3));
 		

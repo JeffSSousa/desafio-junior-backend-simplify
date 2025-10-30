@@ -7,8 +7,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotBlank;
 
 
 @Entity
@@ -18,31 +19,40 @@ public class Todo implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	@NotBlank
+	private Long todoId;
 	private String name;
-	@NotBlank
 	private String description;
 	private boolean completed;
 	private Integer priority;
-
+	
+	@ManyToOne
+	@JoinColumn(name = "login_id")
+	private Login login;
+	
+	
 	public Todo() {
 	}
 
-	public Todo(String name, String description, boolean completed, Integer priority) {
+	
+	public Todo(String name, String description, boolean completed, Integer priority, Login login) {
 		this.name = name;
 		this.description = description;
 		this.completed = completed;
 		this.priority = priority;
+		this.login = login;
 	}
 
-	public Long getId() {
-		return id;
+
+
+	public Long getTodoId() {
+		return todoId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setTodoId(Long todoId) {
+		this.todoId = todoId;
 	}
+
 
 	public String getName() {
 		return name;
@@ -75,10 +85,20 @@ public class Todo implements Serializable{
 	public void setPriority(Integer priority) {
 		this.priority = priority;
 	}
+	
+	public Login getLogin() {
+		return login;
+	}
+
+
+	public void setLogin(Login login) {
+		this.login = login;
+	}
+
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(todoId);
 	}
 
 	@Override
@@ -90,7 +110,7 @@ public class Todo implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Todo other = (Todo) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(todoId, other.todoId);
 	}
 	
 	

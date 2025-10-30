@@ -41,7 +41,7 @@ public class TodoResource {
 	@PostMapping
 	public ResponseEntity<Todo> insert(@RequestBody Todo todo){
 		todo = todoService.insert(todo);
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(todo.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(todo.getTodoId()).toUri();
 		return ResponseEntity.created(uri).body(todo);
 	}
 	
