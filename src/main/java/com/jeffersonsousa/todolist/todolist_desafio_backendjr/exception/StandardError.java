@@ -1,4 +1,4 @@
-package com.jeffersonsousa.todolist.todolist_desafio_backendjr.resources.exceptions;
+package com.jeffersonsousa.todolist.todolist_desafio_backendjr.exception;
 
 import java.io.Serializable;
 import java.time.Instant;

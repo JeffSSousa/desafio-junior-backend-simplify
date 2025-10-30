@@ -1,4 +1,4 @@
-package com.jeffersonsousa.todolist.todolist_desafio_backendjr.resources.exceptions;
+package com.jeffersonsousa.todolist.todolist_desafio_backendjr.exception;
 
 import java.time.Instant;
 
@@ -6,9 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.services.exceptions.DataBaseException;
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.services.exceptions.ResourceNotFoundException;
 
 import jakarta.servlet.http.HttpServletRequest;
 

@@ -1,4 +1,4 @@
-package com.jeffersonsousa.todolist.todolist_desafio_backendjr.entities;
+package com.jeffersonsousa.todolist.todolist_desafio_backendjr.entity;
 
 import java.io.Serializable;
 import java.util.Objects;

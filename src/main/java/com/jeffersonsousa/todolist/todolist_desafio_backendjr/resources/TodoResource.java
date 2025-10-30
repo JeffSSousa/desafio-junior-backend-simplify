@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entities.Todo;
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.services.TodoService;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entity.Todo;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.service.TodoService;
 
 @RestController
 @RequestMapping("/todos")

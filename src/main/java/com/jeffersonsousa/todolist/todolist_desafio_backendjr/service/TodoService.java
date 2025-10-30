@@ -1,4 +1,4 @@
-package com.jeffersonsousa.todolist.todolist_desafio_backendjr.services;
+package com.jeffersonsousa.todolist.todolist_desafio_backendjr.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,9 +8,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entities.Todo;
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.repositories.TodoRepository;
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.services.exceptions.ResourceNotFoundException;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entity.Todo;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.exception.ResourceNotFoundException;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.repository.TodoRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 

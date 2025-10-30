@@ -7,8 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entities.Todo;
-import com.jeffersonsousa.todolist.todolist_desafio_backendjr.repositories.TodoRepository;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.entity.Todo;
+import com.jeffersonsousa.todolist.todolist_desafio_backendjr.repository.TodoRepository;
 
 @Configuration
 @Profile("test")
@@ -25,7 +25,6 @@ public class TestConfig implements CommandLineRunner{
 		Todo example3 = new Todo("Testes", "Criar testes com JUnit", false, 1);
 		
 		todoRepository.saveAll(Arrays.asList(example1,example2,example3));
-		
 		
 	}
 }
